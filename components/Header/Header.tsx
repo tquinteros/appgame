@@ -25,6 +25,7 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
     <header className="container mx-auto flex items-center justify-between">
       <h3 className="text-4xl">LOGO</h3>
       <h3 className="text-4xl">{user?.level}</h3>
+      <h3 className="text-4xl">{user?.username}</h3>
       <ul className="flex gap-4">
         <li>Home</li>
         <li>Home</li>

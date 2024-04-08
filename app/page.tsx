@@ -4,7 +4,6 @@ import { auth, currentUser } from "@clerk/nextjs";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { User } from "@/interfaces/User";
-// Define una interfaz para el usuario de MongoDB
 
 export default async function Home() {
   const user = await currentUser();
