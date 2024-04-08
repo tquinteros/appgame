@@ -34,9 +34,12 @@ export const getUserById = async (id: string) => {
     await connectMongoDB();
 
     const user = await User.findById(id);
+    if (!user) {
+      console.log("User not found");
+    }
     return user;
-
   } catch (error) {
-    console.log(error);
+    console.error("Error fetching user by ID:", error);
+    throw error;
   }
 };
