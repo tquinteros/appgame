@@ -4,6 +4,7 @@ import connectMongoDB from "../mongodb";
 export const createUser = async (user: any) => {
   try {
     user.level = 1;
+    user.experience = 0;
 
     await connectMongoDB();
 

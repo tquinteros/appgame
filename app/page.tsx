@@ -15,6 +15,7 @@ export default async function Home() {
         id: thisUser._id.toString(),
         username: thisUser.username,
         level: thisUser.level,
+        experience: thisUser.experience,
       }
     : null;
 
