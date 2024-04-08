@@ -24,10 +24,6 @@ const UserSchema = new Schema({
     },
     lastName: {
         type: String,
-    },    
-    level: {
-        type: Number,
-        default: 1,
     },
 });
 const User = mongoose.models.User || mongoose.model("User", UserSchema)
