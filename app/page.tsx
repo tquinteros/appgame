@@ -1,6 +1,6 @@
 import Header from "@/components/Header/Header";
 import { getUserById } from "@/libs/actions/user.action";
-import { auth, currentUser } from "@clerk/nextjs";
+import { auth, currentUser, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 
 export default async function Home() {
@@ -12,6 +12,7 @@ export default async function Home() {
     <div>
       {user && <h1>{thisUser.level}</h1>}
       <Header />
+      <UserButton />
     </div>
   );
 }
