@@ -28,6 +28,10 @@ const UserSchema = new Schema({
     type: Number,
     default: 1,
   },
+  experience: {
+    type: Number,
+    default: 0,
+  },
 });
 const User = mongoose.models.User || mongoose.model("User", UserSchema);
 
