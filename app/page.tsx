@@ -12,7 +12,6 @@ export default async function Home() {
     <div>
       {user && <h1>{thisUser.level}</h1>}
       <Header />
-      <UserButton />
     </div>
   );
 }
