@@ -44,3 +44,14 @@ export const getUserById = async (id: string) => {
     throw error;
   }
 };
+
+export const addExperience = async () => {
+  try {
+    await connectMongoDB();
+    await User.updateOne({}, { $inc: { experience: 1 } });
+    return { message: "Experience added successfully" };
+  } catch (error) {
+    console.error("Error adding experience:", error);
+    throw error;
+  }
+};
